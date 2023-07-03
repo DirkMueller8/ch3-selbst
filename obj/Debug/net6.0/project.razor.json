@@ -18379,6 +18379,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dirkm\\repo\\ch3-selbst\\Views\\Home\\RsvpForm.cshtml",
+      "TargetPath": "Views\\Home\\RsvpForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dirkm\\repo\\ch3-selbst\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
