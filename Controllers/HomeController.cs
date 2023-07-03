@@ -10,4 +10,15 @@ public class HomeController : Controller
     {
         return View();
     }
+    public ViewResult RsvpForm()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public ViewResult RsvpForm(GuestResponse guestResponse)
+    {
+        Repository.AddResponse(guestResponse);
+        return View(guestResponse);
+    } 
 }
