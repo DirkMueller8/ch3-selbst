@@ -2,30 +2,32 @@
 using Microsoft.AspNetCore.Mvc;
 using ch3_selbst.Models;
 
-namespace ch3_selbst.Controllers;
-
-public class HomeController : Controller
+namespace ch3_selbst.Controllers
 {
-    public IActionResult Index()
-    {
-        return RsvpForm();
-    }
-    
-    [HttpGet]
-    public ViewResult RsvpForm()
-    {
-        return View();
-    }
 
-    [HttpPost]
-    public ViewResult RsvpForm(GuestResponse guestResponse)
+    public class HomeController : Controller
     {
-        Repository.AddResponse(guestResponse);
-        return View("Thanks", guestResponse);
-    }
+        public IActionResult Index()
+        {
+            return RsvpForm();
+        }
 
-    public ViewResult ListResponses()
-    {
-        return View(Repository.Responses.Where(x => x.WillAttend == true));
+        [HttpGet]
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+                Repository.AddResponse(guestResponse);
+                return View("Thanks", guestResponse);
+        }
+
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responses.Where(r => r.WillAttend == true));
+        }
     }
 }
