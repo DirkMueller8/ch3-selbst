@@ -1,1 +1,27 @@
 @model ch3_selbst.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-devicetype-width">
+        <title>Thanks</title>
+    </head>
+    <body>
+        <div>
+            <h1>Thanks, @Model?.Name!</h1>
+            @if (Model?.WillAttend == true)
+            {
+                @:It is great you are coming!
+            }
+            else
+            {
+                @:Sorry to hear you cannot come.
+            }
+        </div>
+        Click <a asp-action="ListResponses">here</a> to see who is coming
+    </body>
+</html>
