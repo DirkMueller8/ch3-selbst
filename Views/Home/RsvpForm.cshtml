@@ -12,7 +12,25 @@
     <body>
         <form asp-action="RsvpForm" method="post"></form>
         <div>
-            
+            <label asp-for="Name">Your name:</label>
+            <input asp-for="Name"/>
         </div>
+        <div>
+            <label asp-for="Email">Your email:</label>
+            <input asp-for="Email"/>
+        </div>
+        <div>
+            <label asp-for="Phone">Your email:</label>
+            <input asp-for="Phone"/>
+        </div>
+        <div>
+            <label asp-for="WillAttend">Will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
     </body>
 </html>
