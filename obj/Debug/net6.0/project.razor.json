@@ -18389,11 +18389,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\dirkm\\repo\\ch3-selbst\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\dirkm\\repo\\ch3-selbst\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
