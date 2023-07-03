@@ -10,6 +10,8 @@ public class HomeController : Controller
     {
         return RsvpForm();
     }
+    
+    [HttpGet]
     public ViewResult RsvpForm()
     {
         return View();
@@ -20,5 +22,10 @@ public class HomeController : Controller
     {
         Repository.AddResponse(guestResponse);
         return View("Thanks", guestResponse);
-    } 
+    }
+
+    public ViewResult ListResponses()
+    {
+        return View(Repository.Responses.Where(x => x.WillAttend == true));
+    }
 }
