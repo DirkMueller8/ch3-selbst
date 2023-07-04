@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ch3_selbst.Models;
 
 namespace ch3_selbst.Controllers
@@ -9,7 +8,7 @@ namespace ch3_selbst.Controllers
     {
         public IActionResult Index()
         {
-            return RsvpForm();
+            return View();
         }
 
         [HttpGet]

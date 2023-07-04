@@ -4,33 +4,37 @@
 }
 
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta name="viewport" content="width-devicetype-width">
-        <title>Party</title>
-    </head>
-    <body>
-        <form asp-action="RsvpForm" method="post"></form>
-        <div>
-            <label asp-for="Name">Your name:</label>
-            <input asp-for="Name"/>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+</head>
+<body>
+    <form asp-action="RsvpForm" method="post" class="m-2">
+        <div class="form-group">
+            <label asp-for="Name" class="form-label">Your name:</label>
+            <input asp-for="Name" class="form-control" />
         </div>
-        <div>
-            <label asp-for="Email">Your email:</label>
-            <input asp-for="Email"/>
+        <div class="form-group">
+            <label asp-for="Email" class="form-label">Your email:</label>
+            <input asp-for="Email"  class="form-control" />
         </div>
-        <div>
-            <label asp-for="Phone">Your phone:</label>
-            <input asp-for="Phone"/>
+        <div class="form-group">
+            <label asp-for="Phone" class="form-label">Your phone:</label>
+            <input asp-for="Phone" class="form-control" />
         </div>
-        <div>
-            <label asp-for="WillAttend">Will you attend?</label>
-            <select asp-for="WillAttend">
+        <div class="form-group">
+            <label asp-for="WillAttend" class="form-label">
+                Will you attend?
+            </label>
+            <select asp-for="WillAttend" class="form-control">
                 <option value="">Choose an option</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
+                <option value="true">Yes, I'll be there</option>
+                <option value="false">No, I can't come</option>
             </select>
         </div>
-        <button type="submit">Submit</button>
-    </body>
+        <button type="submit" class="btn btn-primary mt-3">Submit RSVP</button>
+    </form>
+</body>
 </html>
